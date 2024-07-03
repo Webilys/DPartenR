@@ -1,0 +1,24 @@
+﻿body {margin:0;padding:0;word-wrap:break-word;}
+img {border:none;}
+input:not([type=image]) {border:1px solid black;border-radius:2px;padding:0;}
+textarea {border:1px solid black;padding:0;}
+* {box-sizing:content-box;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;-ms-box-sizing:content-box;}
+a:link {color:#393939;text-decoration:underline;}
+a:visited {color:#393939;text-decoration:underline;}
+a:hover {color:#393939;text-decoration:underline;}
+a:active {color:#393939;text-decoration:underline;}
+.Artistic-Body { text-align:left;line-height:18.00px;margin:0px;text-indent:0.0px;font-family:"Verdana", sans-serif;font-style:normal;font-weight:normal;color:#000000;background-color:transparent;text-decoration:none;font-variant:normal;font-size:16.0px;vertical-align:0; }
+.Body { text-align:left;line-height:18.00px;margin:0px 0px 12px;text-indent:0.0px;font-family:"Verdana", sans-serif;font-style:normal;font-weight:normal;color:#000000;background-color:transparent;text-decoration:none;font-variant:normal;font-size:16.0px;vertical-align:0; }
+.Body-Text-Indent { text-align:justify;line-height:18.00px;margin:0px;text-indent:47.2px;font-family:"Verdana", sans-serif;font-style:normal;font-weight:normal;color:#000000;background-color:transparent;text-decoration:none;font-variant:normal;font-size:16.0px;vertical-align:0; }
+.Heading-1 { text-align:center;line-height:18.00px;margin:32px 0px 4px;text-indent:0.0px;font-family:"Verdana", sans-serif;font-style:normal;font-weight:normal;color:#000000;background-color:transparent;text-decoration:none;font-variant:normal;font-size:16.0px;vertical-align:0; }
+.Heading-1:first-child { margin-top:0; }
+.Heading-2 { text-align:left;line-height:18.00px;margin:20px 0px 4px;text-indent:0.0px;font-family:"Verdana", sans-serif;font-style:normal;font-weight:normal;color:#000000;background-color:transparent;text-decoration:none;font-variant:normal;font-size:16.0px;vertical-align:0; }
+.Heading-2:first-child { margin-top:0; }
+.Heading-3 { text-align:left;line-height:18.00px;margin:12px 0px 0px;text-indent:0.0px;font-family:"Verdana", sans-serif;font-style:normal;font-weight:700;color:#000000;background-color:transparent;text-decoration:none;font-variant:normal;font-size:16.0px;vertical-align:0; }
+.Heading-3:first-child { margin-top:0; }
+.Headings { text-align:left;line-height:18.00px;margin:0px;text-indent:0.0px;font-family:"Verdana", sans-serif;font-style:normal;font-weight:normal;color:#000000;background-color:transparent;text-decoration:none;font-variant:normal;font-size:16.0px;vertical-align:0; }
+.List-Paragraph { text-align:left;line-height:19.42px;margin:0px 0px 10px 48px;text-indent:0.0px;font-family:"Calibri", sans-serif;font-style:normal;font-weight:normal;color:#000000;background-color:transparent;text-decoration:none;font-variant:normal;font-size:14.7px;vertical-align:0; }
+.Normal { text-align:left;line-height:18.00px;margin:0px;text-indent:0.0px;font-family:"Verdana", sans-serif;font-style:normal;font-weight:normal;color:#000000;background-color:transparent;text-decoration:none;font-variant:normal;font-size:16.0px;vertical-align:0; }
+.Normal5 { text-align:left;line-height:18.00px;margin:0px;text-indent:0.0px;font-family:"Verdana", sans-serif;font-style:normal;font-weight:normal;color:#000000;background-color:transparent;text-decoration:none;font-variant:normal;font-size:16.0px;vertical-align:0; }
+.Title { text-align:left;line-height:23.00px;margin:0px 0px 20px;text-indent:0.0px;font-family:"Verdana", sans-serif;font-style:normal;font-weight:700;color:#00409e;background-color:transparent;text-decoration:none;font-variant:normal;font-size:18.7px;vertical-align:0;letter-spacing:0.40px; }
+.Book-Title { font-style:italic;font-weight:700;text-decoration:none;letter-spacing:0.33px; }
