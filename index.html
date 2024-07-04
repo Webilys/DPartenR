@@ -295,6 +295,58 @@
         </div>
       </div>
     </footer>
+    <div class="imgChatButton">
+      <img
+        src="./assets/img/trucky.webp"
+        alt="Trucky, le chatbot de DParten'R"
+        id="iconChat"
+        onclick="openChat()"
+      />
+    </div>
+    <div class="chatbot">
+      <div id="closeIconChatContainer">
+        <i
+          class="fa-solid fa-xmark"
+          id="closeChatIcon"
+          onclick="closeChat()"
+        ></i>
+      </div>
+
+      <div class="imgChat">
+        <img
+          src="./assets/img/trucky.webp"
+          alt="Trucky, le chatbot de DParten'R"
+          id="icon-chat"
+        />
+      </div>
+      <p id="bienvenue">
+        Bonjour, <br /><br />
+        Enchanté ! Je suis Trucky.
+
+        <br /><br />
+        Posez-moi votre question !
+      </p>
+      <div id="response"></div>
+      <div id="question">
+        <input
+          type="text"
+          id="question-user"
+          placeholder="Écrivez votre question"
+        />
+        <button type="submit" onclick="sendQuestion()">
+          <i
+            class="fa-solid fa-paper-plane"
+            id="button-send"
+            id="icon-normal"
+          ></i>
+          <i
+            class="fa-regular fa-paper-plane"
+            id="button-send-hover"
+            id="icon-hover"
+          ></i>
+        </button>
+      </div>
+    </div>
     <script src="./assets/js/_index.js"></script>
   </body>
 </html>

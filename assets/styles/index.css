@@ -261,7 +261,7 @@ header nav #button-call {
 }
 
 .title-page {
-  background: url(../img/bg-hero.jpg) center/cover;
+  background: url(../img/bg-hero.webp) center/cover;
   padding: 0;
 }
 .title-page .overlay {
@@ -376,7 +376,7 @@ footer .copyright ul li a i:hover {
 }
 
 .contact {
-  background: url(../img/services.png) center/cover;
+  background: url(../img/services.webp) center/cover;
   padding: 0;
 }
 .contact .overlay {
@@ -390,6 +390,171 @@ footer .copyright ul li a i:hover {
 .contact .overlay p {
   color: #f1f1f1;
   padding-bottom: 30px;
+}
+
+.imgChatButton {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1000000000000000000;
+}
+.imgChatButton #iconChat {
+  margin: 20px;
+  width: 100px;
+  border-radius: 360px;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.chatbot {
+  display: none;
+  background: #fdfdfd;
+  height: 100%;
+  width: 30%;
+  padding: 20px;
+  border: 2px solid #0da8dc;
+  border-radius: 20px;
+  margin: 20px;
+  position: sticky;
+  bottom: 20px;
+  left: 100%;
+  z-index: 10000000000000;
+}
+.chatbot #closeChatIcon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+  width: 40px;
+  border: 2px solid #0da8dc;
+  border-radius: 360px;
+  background: #fdfdfd;
+  position: absolute;
+  color: #0da8dc;
+  font-size: 1.5rem;
+  top: 0px;
+  right: -20px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.chatbot #closeChatIcon:hover {
+  background: #0da8dc;
+  color: #fdfdfd;
+}
+.chatbot .imgChat img {
+  width: 100px;
+  border-radius: 360px;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+.chatbot #response {
+  width: 100%;
+  height: 80%;
+  overflow-y: auto;
+  overflow-clip-margin: border-box;
+}
+.chatbot #bienvenue,
+.chatbot .bubble-right {
+  color: #333;
+}
+.chatbot #bienvenue,
+.chatbot .bubble-right {
+  width: 70%;
+  margin: 5px 0 5px 30%;
+  background: #fdfdfd;
+  padding: 20px;
+  border: #0da8dc;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  text-align: right;
+}
+.chatbot .bubble-left {
+  width: 70%;
+  margin: 5px 30% 5px 0;
+  background: #0da8dc;
+  padding: 20px;
+  border: #0da8dc;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  text-align: left;
+  color: #fdfdfd;
+}
+.chatbot #question {
+  width: 100%;
+  height: 20%;
+}
+.chatbot #question input {
+  width: 70%;
+  padding: 10px;
+  margin-right: 20px;
+  cursor: text;
+  border: 1px solid #0da8dc;
+  border-radius: 20px;
+  outline: #0da8dc;
+}
+.chatbot #question button {
+  width: 40px;
+  height: 40px;
+  padding: 5px 10px;
+  margin-top: 20px;
+  border-radius: 360px;
+  cursor: pointer;
+  background: #fdfdfd;
+  border: 1px solid #0da8dc;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.chatbot #question button:hover {
+  background: #0da8dc;
+}
+.chatbot #question button i {
+  color: #0da8dc;
+}
+.chatbot #question button:hover #button-send {
+  display: none;
+}
+.chatbot #button-send-hover {
+  display: none;
+}
+.chatbot #question button:hover #button-send-hover {
+  display: block;
+  color: #fdfdfd;
+}
+.chatbot #chargement {
+  display: none;
+  -webkit-animation: rotation 1000ms infinite linear;
+          animation: rotation 1000ms infinite linear;
+  color: #0da8dc;
+}
+@-webkit-keyframes rotation {
+  0% {
+    rotate: 0;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotation {
+  0% {
+    rotate: 0;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 button {
@@ -442,7 +607,7 @@ section {
 }
 
 #accueil .hero {
-  background: url(../img/bg-hero.jpg) center/cover;
+  background: url(../img/bg-hero.webp) center/cover;
   display: grid;
   grid-template-columns: 65% 35%;
   margin: 10px auto 50px;
@@ -490,7 +655,7 @@ section {
   padding-bottom: 30px;
 }
 #accueil .services {
-  background: url(../img/logistic.png) center/cover;
+  background: url(../img/logistic.webp) center/cover;
   padding: 0;
 }
 #accueil .services .overlay {
@@ -564,7 +729,7 @@ section {
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
-  background: url(../img/logistic.png) center/cover;
+  background: url(../img/logistic.webp) center/cover;
 }
 #a-propos .missionValeurs div .overlay {
   background: #0da8dc;
