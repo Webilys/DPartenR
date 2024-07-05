@@ -463,12 +463,8 @@ footer .copyright ul li a i:hover {
   overflow-y: auto;
   overflow-clip-margin: border-box;
 }
-.chatbot #bienvenue,
 .chatbot .bubble-right {
   color: #333;
-}
-.chatbot #bienvenue,
-.chatbot .bubble-right {
   width: 70%;
   margin: 5px 0 5px 30%;
   background: #fdfdfd;
@@ -479,7 +475,9 @@ footer .copyright ul li a i:hover {
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   text-align: right;
 }
-.chatbot .bubble-left {
+.chatbot #bienvenue,
+.chatbot .bubble-left,
+.chatbot #formulaireChat {
   width: 70%;
   margin: 5px 30% 5px 0;
   background: #0da8dc;
@@ -490,6 +488,57 @@ footer .copyright ul li a i:hover {
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   text-align: left;
   color: #fdfdfd;
+}
+.chatbot #formulaireChat {
+  display: none;
+  text-align: center;
+}
+.chatbot #formulaireChat form label {
+  width: 100%;
+  padding: 10px;
+  color: #fdfdfd;
+}
+.chatbot #formulaireChat form input {
+  background: transparent;
+  display: block;
+  width: 80%;
+  margin: 20px auto;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #fdfdfd;
+  outline: none;
+  color: #fdfdfd;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.chatbot #formulaireChat form input:hover, .chatbot #formulaireChat form input:focus, .chatbot #formulaireChat form input:active {
+  border-bottom: 1px solid #2e2d2c;
+}
+.chatbot #formulaireChat form textarea {
+  display: block;
+  width: 80%;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #fdfdfd;
+  outline: none;
+  background: transparent;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.chatbot #formulaireChat form textarea:hover, .chatbot #formulaireChat form textarea:focus, .chatbot #formulaireChat form textarea:active {
+  border: 1px solid #2e2d2c;
+}
+.chatbot #formulaireChat form button {
+  color: #fdfdfd;
+  border: 1px solid #fdfdfd;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.chatbot #formulaireChat form button:hover {
+  color: #0da8dc;
+  background: #fdfdfd;
 }
 .chatbot #question {
   width: 100%;

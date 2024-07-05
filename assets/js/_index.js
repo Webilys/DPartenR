@@ -82,13 +82,16 @@ function sendQuestion() {
 
     //prépare la réponse
     const newResponse = document.createElement("p");
+    const formChat = document.getElementById("formulaireChat");
 
     // vérifie la question et trouve la réponse appropriée
     if (questionUser === "Comment je m'appelle ?") {
       newResponse.textContent = "Priscilla";
+      formChat.style.display = "none";
     } else {
       newResponse.textContent =
-        "Je ne connais pas la réponse à cette question !";
+        "Je ne connais pas encore la réponse à votre question. Veuillez remplir le formulaire ci-dessous et vous serez recontacté dans les plus brefs délais :";
+      formChat.style.display = "block";
     }
 
     if (
@@ -96,9 +99,11 @@ function sendQuestion() {
       "Comment s'appelle le cheval principal dans L'étalon noir ?"
     ) {
       newResponse.textContent = "Le cheval principal s'appelle Black !";
+      formChat.style.display = "none";
     } else {
       newResponse.textContent =
-        "Je ne connais pas la réponse à cette question !";
+        "Je ne connais pas encore la réponse à votre question. Veuillez remplir le formulaire ci-dessous et vous serez recontacté dans les plus brefs délais :";
+      formChat.style.display = "block";
     }
 
     //ajoute la classe et renvoi la réponse

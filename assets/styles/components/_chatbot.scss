@@ -66,13 +66,8 @@
     overflow-clip-margin: border-box;
   }
 
-  #bienvenue,
   .bubble-right {
     color: $text;
-  }
-
-  #bienvenue,
-  .bubble-right {
     width: 70%;
     margin: 5px 0 5px 30%;
     background: $white1;
@@ -83,7 +78,9 @@
     text-align: right;
   }
 
-  .bubble-left {
+  #bienvenue,
+  .bubble-left,
+  #formulaireChat {
     width: 70%;
     margin: 5px 30% 5px 0;
     background: $color1;
@@ -93,6 +90,67 @@
     box-shadow: 0 0 5px $blackShadow;
     text-align: left;
     color: $white1;
+  }
+
+  #formulaireChat {
+    display: none;
+    text-align: center;
+
+    form {
+      label {
+        width: 100%;
+        padding: 10px;
+        color: $white1;
+      }
+      input {
+        background: transparent;
+        display: block;
+        width: 80%;
+        margin: 20px auto;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        border-bottom: 1px solid $white1;
+        outline: none;
+        color: $white1;
+        transition: 0.2s;
+
+        &:hover,
+        &:focus,
+        &:active {
+          border-bottom: 1px solid $black1;
+        }
+      }
+
+      textarea {
+        display: block;
+        width: 80%;
+        margin: 20px auto;
+        padding: 10px;
+        border-radius: 20px;
+        border: 1px solid $white1;
+        outline: none;
+        background: transparent;
+        transition: 0.2s;
+
+        &:hover,
+        &:focus,
+        &:active {
+          border: 1px solid $black1;
+        }
+      }
+
+      button {
+        color: $white1;
+        border: 1px solid $white1;
+        transition: 0.2s;
+
+        &:hover {
+          color: $color1;
+          background: $white1;
+        }
+      }
+    }
   }
 
   #question {
