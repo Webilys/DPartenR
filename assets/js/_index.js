@@ -75,6 +75,7 @@ const qaPairs = [
     keywords: [
       "formations en distanciel",
       "formation distanciel",
+      "formation en distanciel",
       "formation à distance",
       "formation en visio",
       "formations en visio",
