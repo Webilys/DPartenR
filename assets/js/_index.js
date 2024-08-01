@@ -30,7 +30,7 @@ function closeNav() {
   navList.style.display = "none";
 }
 
-//----CHATBOT----
+// ----CHATBOT----
 
 //ouverture du chatbot
 const chatbot = document.querySelector(".chatbot");
@@ -47,70 +47,186 @@ function closeChat() {
   chatbot.style.display = "none";
   iconChat.style.display = "block";
 }
-//chatbot
 
+// Liste de questions et réponses
+const qaPairs = [
+  {
+    question: "Faites-vous des formations sur mesure ?",
+    keywords: ["formations sur mesure", "formation sur mesure"],
+    answer: "Oui, nous proposons des formations sur mesure.",
+  },
+  {
+    question: "Faites-vous des préparations aux diplômes ?",
+    keywords: ["préparations aux diplômes", "préparation aux diplômes"],
+    answer: "Oui, nous proposons des préparations aux diplômes.",
+  },
+  {
+    question:
+      "Faites-vous des formations préparant à l’attestation de capacité ?",
+    keywords: [
+      "formations préparant à l’attestation de capacité",
+      "formation attestation de capacité",
+    ],
+    answer:
+      "Oui, nous proposons des formations préparant à l’attestation de capacité.",
+  },
+  {
+    question: "Faites-vous des formations en distanciel ?",
+    keywords: [
+      "formations en distanciel",
+      "formation distanciel",
+      "formation à distance",
+      "formation en visio",
+      "formations en visio",
+    ],
+    answer: "Oui, nous proposons des formations en distanciel.",
+  },
+  {
+    question: "Faites-vous des formations en présentiel ?",
+    keywords: [
+      "formations en présentiel",
+      "formation présentiel",
+      "formation sur place",
+    ],
+    answer: "Oui, nous proposons des formations en présentiel.",
+  },
+  {
+    question: "Faites-vous des formations dans toute la France ?",
+    keywords: ["formations dans toute la France", "formation France"],
+    answer: "Oui, nous proposons des formations dans toute la France.",
+  },
+  {
+    question: "Faites-vous les FCO ?",
+    keywords: ["FCO"],
+    answer: "Non, nous ne faisons pas les FCO.",
+  },
+  {
+    question: "Pouvons nous faire un entretien technique ?",
+    keywords: ["entretien technique"],
+    answer:
+      "Oui, pour demander votre entretien technique veuillez remplir le formulaire ci-dessous :",
+  },
+  {
+    question: "Faites-vous des audits ou diagnostics ?",
+    keywords: ["audits", "diagnostics"],
+    answer: "Oui, nous proposons des audits ou diagnostics.",
+  },
+  {
+    question: "Faites-vous de l’accompagnement ou conseil ?",
+    keywords: ["accompagnement", "conseil"],
+    answer: "Oui, nous proposons de vous accompagner et de vous conseiller.",
+  },
+  {
+    question: "Quels sont vos tarifs ?",
+    keywords: ["tarif", "tarifs", "prix"],
+    answer:
+      "Cela dépend de la mission, du contenu, de la durée, etc. Pour obtenir un devis personnalisé, veuillez remplir le formulaire de contact ci-dessous :",
+  },
+  {
+    question: "Êtes-vous certifié Qualiopi ?",
+    keywords: ["certifié Qualiopi", "Qualiopi"],
+    answer: "Oui, nous sommes certifiés Qualiopi.",
+  },
+  {
+    question: "Quelles sont vos références ?",
+    keywords: ["références", "clients"],
+    answer:
+      "Nos références sont des grands groupes comme Carrefour, Fedex, Saint Gobain, mais aussi de nombreuses TPE et PME.",
+  },
+  {
+    question: "Combien de temps durent les formations ?",
+    keywords: ["durée formations", "combien de temps formations"],
+    answer:
+      "En entreprise, nos formations durent généralement de 1 à 3 jours. Pour les préparations au diplômes, de quelques jours à plusieurs semaines ou mois. Dans tous les cas, nous nous adaptons aux besoins.",
+  },
+  {
+    question:
+      "Combien de temps dure une mission de conseil et/ou d’accompagnement ?",
+    keywords: [
+      "durée mission conseil",
+      "combien de temps mission accompagnement",
+    ],
+    answer:
+      "Il y a d’abord une phase de diagnostic qui dure de 1 à 5 jours qui permet de déterminer ensuite les besoins et la durée de la mission.",
+  },
+];
+
+// Fonction pour envoyer une question
 function sendQuestion() {
   const bienvenue = document.getElementById("bienvenue");
   const responseContainer = document.getElementById("response");
 
-  //Disparition du message de Bienvenue
+  // Disparition du message de Bienvenue
   bienvenue.style.display = "none";
 
-  //faire apparaître la question de l'utilisateur
-
+  // Faire apparaître la question de l'utilisateur
   const questionContainer = document.getElementById("question-user");
-  const questionUser = questionContainer.value;
+  const questionUser = questionContainer.value.toLowerCase();
   const newElement = document.createElement("p");
   newElement.textContent = questionUser;
   newElement.classList.add("bubble-right");
   responseContainer.appendChild(newElement);
 
-  //Icône de chargement en attendant la réponse
-
+  // Icône de chargement en attendant la réponse
   const chargement = document.createElement("i");
-  chargement.classList.add("fa-solid");
-  chargement.classList.add("fa-spinner");
+  chargement.classList.add("fa-solid", "fa-spinner");
   chargement.id = "chargement";
   responseContainer.appendChild(chargement);
   chargement.style.display = "block";
 
   // Le chatBot répond après un délai
-
   setTimeout(() => {
-    //supprime l'icône de chargement
+    // Supprime l'icône de chargement
     chargement.style.display = "none";
 
-    //prépare la réponse
+    // Prépare la réponse
     const newResponse = document.createElement("p");
     const formChat = document.getElementById("formulaireChat");
 
-    // vérifie la question et trouve la réponse appropriée
-    if (questionUser === "Comment je m'appelle ?") {
-      newResponse.textContent = "Priscilla";
-      formChat.style.display = "none";
-    } else {
-      newResponse.textContent =
-        "Je ne connais pas encore la réponse à votre question. Veuillez remplir le formulaire ci-dessous et vous serez recontacté dans les plus brefs délais :";
-      formChat.style.display = "block";
+    // Vérifie la question et trouve la réponse appropriée
+    let responseText =
+      "Je ne connais pas encore la réponse à votre question. Veuillez remplir le formulaire ci-dessous et vous serez recontacté dans les plus brefs délais :";
+    formChat.style.display = "block";
+
+    for (let i = 0; i < qaPairs.length; i++) {
+      const pair = qaPairs[i];
+      for (let j = 0; j < pair.keywords.length; j++) {
+        if (questionUser.includes(pair.keywords[j])) {
+          responseText = pair.answer;
+          if (
+            responseText.includes(
+              "veuillez remplir le formulaire de contact ci-dessous"
+            )
+          ) {
+            formChat.style.display = "block";
+          } else {
+            formChat.style.display = "none";
+          }
+          break;
+        }
+      }
+      if (
+        responseText !==
+        "Je ne connais pas encore la réponse à votre question. Veuillez remplir le formulaire ci-dessous et vous serez recontacté dans les plus brefs délais :"
+      ) {
+        break;
+      }
     }
 
-    if (
-      questionUser ===
-      "Comment s'appelle le cheval principal dans L'étalon noir ?"
-    ) {
-      newResponse.textContent = "Le cheval principal s'appelle Black !";
-      formChat.style.display = "none";
-    } else {
-      newResponse.textContent =
-        "Je ne connais pas encore la réponse à votre question. Veuillez remplir le formulaire ci-dessous et vous serez recontacté dans les plus brefs délais :";
-      formChat.style.display = "block";
-    }
-
-    //ajoute la classe et renvoi la réponse
+    // Ajoute la classe et renvoi la réponse
+    newResponse.textContent = responseText;
     newResponse.classList.add("bubble-left");
     responseContainer.appendChild(newResponse);
 
-    //efface la réponse de l'input
+    // Efface la réponse de l'input
     questionContainer.value = "";
   }, 2000);
 }
+
+// Ajout de l'écouteur d'événement pour la touche "Entrée"
+const questionInput = document.getElementById("question-user");
+questionInput.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    sendQuestion();
+  }
+});
