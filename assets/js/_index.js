@@ -85,6 +85,7 @@ const qaPairs = [
     question: "Faites-vous des formations en présentiel ?",
     keywords: [
       "formations en présentiel",
+      "formation en présentiel",
       "formation présentiel",
       "formation sur place",
     ],
