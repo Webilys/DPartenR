@@ -266,11 +266,10 @@
       <div class="copyright">
         <div>
           <p>
-            ©2024 | <a href="./index.html">DPARTEN'R</a> | Développé par
-            <a href="https://priscilladigitech.fr" target="_blank"
-              >Priscilla DigiTech</a
-            >
-            | Tous droits réservées
+            ©2024 | <a href="./index.html">DPARTEN'R</a> | Made with
+            <i class="fa-solid fa-heart"></i> by
+            <a href="https://webilys.fr" target="_blank">Webilys</a> | Tous
+            droits réservées
           </p>
         </div>
         <div>
@@ -282,6 +281,73 @@
         </div>
       </div>
     </footer>
+    <div class="imgChatButton">
+      <img
+        src="./assets/img/icon_message.webp"
+        alt="Message pour DParten'R"
+        id="iconChat"
+        onclick="openChat()"
+      />
+    </div>
+    <div class="chatbot">
+      <div id="closeIconChatContainer">
+        <i
+          class="fa-solid fa-xmark"
+          id="closeChatIcon"
+          onclick="closeChat()"
+        ></i>
+      </div>
+
+      <div class="imgChat">
+        <img
+          src="./assets/img/trucky.webp"
+          alt="Trucky, le chatbot de DParten'R"
+          id="icon-chat"
+        />
+      </div>
+      <p id="bienvenue">
+        Bonjour, <br /><br />
+        Enchanté ! Je suis Trucky.
+
+        <br /><br />
+        Posez-moi votre question !
+      </p>
+      <div id="response"></div>
+      <div id="formulaireChat">
+        <form action="https://formspree.io/f/moqgrlnd" method="post">
+          <label for="prenom">Prénom</label>
+          <input name="prenom" id="prenom" type="text" />
+          <label for="nom">Nom</label>
+          <input name="nom" id="nom" type="text" />
+          <label for="email">Email</label>
+          <input name="email" id="email" type="text" />
+          <label for="telephone">Téléphone</label>
+          <input name="telephone" id="telephone" type="text" />
+          <label for="message">Message</label>
+          <textarea name="message" id="message" cols="30" rows="10"></textarea>
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+      <div id="question">
+        <input
+          type="text"
+          id="question-user"
+          placeholder="Écrivez votre question"
+        />
+        <button type="submit" onclick="sendQuestion()">
+          <i
+            class="fa-solid fa-paper-plane"
+            id="button-send"
+            id="icon-normal"
+          ></i>
+          <i
+            class="fa-regular fa-paper-plane"
+            id="button-send-hover"
+            id="icon-hover"
+          ></i>
+        </button>
+      </div>
+    </div>
     <script src="./assets/js/_index.js"></script>
   </body>
 </html>
