@@ -1,9 +1,9 @@
-#a-propos {
+#formation {
   h1 {
     text-transform: uppercase;
   }
 
-  .missionValeurs {
+  .items {
     box-shadow: none;
     border-radius: none;
     padding: 0;
@@ -47,4 +47,47 @@
       }
     }
   }
+
+  .bonus {
+    text-align: left;
+  }
+
+  .programme-formation {
+    padding: 0;
+    background: url(../img/logistic.webp) center/cover;
+
+    .overlay-formation {
+      padding: 50px;
+      background: $overlay1;
+      text-align: left;
+      border-radius: 20px;
+
+      h2 {
+        color: $white1;
+      }
+
+      h3 {
+        color: $white1;
+      }
+
+      ul {
+        padding-bottom: 20px;
+        li {
+          color: $white1;
+          list-style-position: inside;
+        }
+      }
+    }
+  }
+
+  //   .organisme {
+  //     background: url(../img/logistic.webp) center/cover;
+  //     padding: 0;
+
+  //     .organisme-overlay {
+  //       background: $overlay1;
+  //       padding: 50px;
+  //       border-radius: 20px;
+  //     }
+  //   }
 }

@@ -782,7 +782,7 @@ section {
   background: url(../img/logistic.webp) center/cover;
 }
 #a-propos .missionValeurs div .overlay {
-  background: #0da8dc;
+  background: rgba(13, 168, 220, 0.7);
   padding: 50px;
   border-radius: 20px;
   height: 100%;
@@ -884,6 +884,19 @@ section {
   padding: 30px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .sous-services .services .overlay .services-container div i {
   padding-bottom: 30px;
@@ -1012,4 +1025,77 @@ section {
 
 .legal h2 {
   margin-top: 30px;
+}
+
+#formation h1 {
+  text-transform: uppercase;
+}
+#formation .items {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+@media screen and (max-width: 800px) {
+  #formation .items {
+    grid-template-columns: 1fr;
+  }
+}
+#formation .items div {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  background: url(../img/logistic.webp) center/cover;
+}
+#formation .items div .overlay {
+  background: rgba(13, 168, 220, 0.7);
+  padding: 50px;
+  border-radius: 20px;
+  height: 100%;
+}
+#formation .items div .overlay i {
+  color: #fdfdfd;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  border: 2px solid #fdfdfd;
+  padding: 20px;
+  border-radius: 150px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+}
+#formation .items div .overlay h2 {
+  color: #fdfdfd;
+}
+#formation .items div .overlay p {
+  color: #fdfdfd;
+}
+#formation .bonus {
+  text-align: left;
+}
+#formation .programme-formation {
+  padding: 0;
+  background: url(../img/logistic.webp) center/cover;
+}
+#formation .programme-formation .overlay-formation {
+  padding: 50px;
+  background: rgba(13, 168, 220, 0.7);
+  text-align: left;
+  border-radius: 20px;
+}
+#formation .programme-formation .overlay-formation h2 {
+  color: #fdfdfd;
+}
+#formation .programme-formation .overlay-formation h3 {
+  color: #fdfdfd;
+}
+#formation .programme-formation .overlay-formation ul {
+  padding-bottom: 20px;
+}
+#formation .programme-formation .overlay-formation ul li {
+  color: #fdfdfd;
+  list-style-position: inside;
 }/*# sourceMappingURL=index.css.map */
